@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine Delight</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay">
+            <div class="hero-content">
+                <h1>Dine Delight</h1>
+                <p>Savor the Culinary Artistry of Chef gordan ramsay</p>
+                <div class="hero-buttons">
+                    <a href="#reservationForm" class="btn">Reserve a Table</a>
+                    <a href="/menu.html" class="btn">Order Online</a>
+                    <a href="#menu" class="btn">Explore Our Menu</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- New Background Image Section -->
+    <section class="image-section"></section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="menu-section">
+        <h2>Discover Our Chef’s Creations</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/images/Grilled Salmon.jpeg" alt="Dish 1">
+                <h3>Grilled Salmon</h3>
+                <p>Perfectly seasoned and grilled to perfection.</p>
+            </div>
+            <div class="menu-item">
+                <img src="/images/Truffle Pasta.jpeg" alt="Dish 2">
+                <h3>Truffle Pasta</h3>
+                <p>A rich and decadent dish with truffle sauce.</p>
+            </div>
+            <div class="menu-item">
+                <img src="/images/briyani.jpeg" alt="Dish 3">
+                <h3>briyani</h3>
+                <p>Succulent, cooked to your taste.</p>
+            </div>
+        </div>
+        <a href="/menu.html" class="btn">View Full Menu</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <h2>The Story Behind Dine Delight</h2>
+        <div class="about-content">
+            <img src="/images/home page chef.webp" alt="gordon ramsay">
+            <p>Chef ramsay brings a lifetime of culinary expertise to Dine Delight, offering a unique fusion of traditional and modern gourmet cuisine. His dishes are inspired by global flavors, blended with fresh, local ingredients.</p>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section class="specials-section">
+        <h2>Special Offers You Can’t Miss</h2>
+        <div class="specials-items">
+            <div class="special-item">
+                <h3>Weekend Brunch</h3>
+                <p>Join us for an exclusive brunch every Saturday and Sunday.</p>
+            </div>
+            <div class="special-item">
+                <h3>Happy Hour</h3>
+                <p>Enjoy 50% off drinks and appetizers from 4 PM - 6 PM.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservationForm" class="reservationForm">
+        <h2>Reserve a Table</h2>
+        <form id="tableReservation">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+    
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+    
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+    
+            <button type="submit">Reserve Now</button>
+        </form>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Dine Delight. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+    <h1>Welcome to DineDelight</h1>
+    <nav>
+      <a href="#" id="reserveTableBtn">Reserve a Table</a>
+      
+    </nav>
+  </header>
+
+  <!-- Table Reservation Form -->
+  <section id="reservationForm" style="display: none;">
+    <h2>Reserve a Table</h2>
+    <form id="tableReservation">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Reservation Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script src="/js/home.js"></script>
+</body>
+</html>

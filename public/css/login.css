@@ -1,0 +1,106 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+/* Container Styles */
+.container {
+  background-color: white;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Tab Styles */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #007bff;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.tab-btn.active {
+  background-color: #0056b3;
+}
+
+/* Form Styles */
+.form-container {
+  padding: 20px;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+}
+
+.form.active {
+  display: flex;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.switch-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  section {
+    margin: 15px;
+    padding: 15px;
+  }
+  input, button {
+    font-size: 14px;
+  }
+}

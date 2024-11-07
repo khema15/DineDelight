@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Review</title>
+    <link rel="stylesheet" href="/css/review.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <div class="review">
+        <div class="container">
+            <div class="form">
+                <h2>Submit Your Review</h2>
+                <form id="reviewForm">
+                    <div class="box">
+                        <div class="label"><h4>Name</h4></div>
+                        <div class="input">
+                            <input type="text" placeholder="Your Name" name="name" required>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="label"><h4>Email</h4></div>
+                        <div class="input">
+                            <input type="email" placeholder="Your Email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="label"><h4>Rating</h4></div>
+                        <div class="input">
+                            <select name="rating" required>
+                                <option value="">Select Rating</option>
+                                <option value="1">1 - Poor</option>
+                                <option value="2">2 - Fair</option>
+                                <option value="3">3 - Good</option>
+                                <option value="4">4 - Very Good</option>
+                                <option value="5">5 - Excellent</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="label"><h4>Feedback</h4></div>
+                        <div class="input">
+                            <textarea placeholder="Share your experience..." name="feedback" required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            const formData = new FormData(this);
+            const reviewData = {};
+    
+            formData.forEach((value, key) => {
+                reviewData[key] = value;
+            });
+    
+            try {
+                const response = await fetch('/api/reviews/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(reviewData)
+                });
+    
+                const result = await response.json();
+                if (response.ok) {
+                    alert(result.message);
+                    this.reset(); // Reset the form
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error('Error submitting review:', error);
+                alert('Failed to submit review. Please try again.');
+            }
+        });
+    </script>
+    
+</body>
+</html>

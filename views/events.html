@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine Delight - Festival Events</title>
+    <link rel="stylesheet" href="/css/events.css">
+    <script defer src="/js/events.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dine Delight - Celebrate with Us!</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/menu.html">Menu</a>
+            <a href="/events.html" class="active">Festivals</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="festival-list">
+            <h2>Select a Festival to Explore</h2>
+            <select id="festival-select">
+                <option value="">-- Select a Festival --</option>
+                <option value="diwali">Diwali Night</option>
+                <option value="christmas">Christmas Eve</option>
+                <option value="new_year">New Year’s Eve Gala</option>
+                <option value="eid">Eid Celebration</option>
+                <option value="pongal">Pongal Festival</option>
+                <option value="holi">Holi Bash</option>
+                <option value="rakshabandhan">Raksha Bandhan</option>
+                <option value="thanksgiving">Thanksgiving Dinner</option>
+                <option value="navaratri">Navaratri Nights</option>
+                <option value="durgapooja">Durga Puja Special</option>
+                <option value="ganesh">Ganesh Chaturthi</option>
+                <option value="anniversary">Restaurant Anniversary</option>
+            </select>
+        </section>
+
+        <section id="festival-details" class="hidden">
+            <h2 id="festival-title"></h2>
+            <ul id="itinerary-list"></ul>
+            <button onclick="openBookingForm()">Book Your Spot</button>
+        </section>
+
+        <section id="booking-form-section" class="hidden">
+            <h2>Book for <span id="selected-festival"></span></h2>
+            <form id="booking-form">
+                <input type="hidden" id="event-name" name="eventName">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+
+                <button type="submit">Confirm Booking</button>
+                <button type="button" onclick="closeBookingForm()">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Dine Delight | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

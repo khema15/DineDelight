@@ -1,0 +1,166 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Navigation styling */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav a.active {
+  border-bottom: 2px solid #ff6347;
+}
+
+/* Main content styling */
+main {
+  padding: 20px;
+}
+
+/* Event styling with animation */
+.event {
+  background-color: white;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scale-up effect on hover */
+.event:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #e55342;
+}
+
+/* Hidden class to toggle visibility */
+.hidden {
+  display: none;
+}
+
+/* Booking form styling */
+#booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px; /* Adjust form width if needed */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and textarea styling with narrower width */
+#booking-form input[type="text"],
+#booking-form input[type="email"],
+#booking-form input[type="number"],
+#booking-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  width: 85%;  /* Adjusted width to decrease size */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Textarea focus effect */
+#booking-form input[type="text"]:focus,
+#booking-form input[type="email"]:focus,
+#booking-form input[type="number"]:focus,
+#booking-form textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* Select box styling with larger size */
+#festival-list select {
+  margin: 20px 0;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* Select box focus effect */
+#festival-list select:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Itinerary list styling with fade-in animation */
+#itinerary-list {
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* List items styling */
+#itinerary-list li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* List items hover effect */
+#itinerary-list li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  section {
+    margin: 15px;
+    padding: 15px;
+  }
+  input, button {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,273 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, background-color 0.5s;
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+header:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styling */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards ease;
+    transition: transform 0.3s ease;
+}
+
+section h2 {
+    color: #ff6b6b;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+section:hover h2 {
+    color: #1dd1a1;
+}
+
+section p, ul {
+    font-size: 1.1em;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+section:hover p, ul {
+    color: #333;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #1dd1a1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #10ac84;
+    transform: scale(1.05);
+}
+
+/* Chef Info Section */
+.chef-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chef-profile {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInUp 1s forwards ease;
+}
+
+.chef-profile:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chef-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.chef-photo img:hover {
+    transform: scale(1.1);
+}
+
+.chef-bio h3 {
+    font-size: 1.4em;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.chef-bio p {
+    font-size: 1em;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.chef-profile:hover .chef-bio h3 {
+    color: #1dd1a1;
+}
+
+.chef-profile:hover .chef-bio p {
+    color: #333;
+}
+/* Our Promise Section */
+.our-promise {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f7f7;
+    border-left: 6px solid #ff6b6b;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s forwards ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-promise:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.our-promise h2 {
+    font-size: 1.8em;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.our-promise:hover h2 {
+    color: #1dd1a1;
+}
+
+.our-promise p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.our-promise:hover p {
+    color: #333;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.chef-photo img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+    border-top: 2px solid #555;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.2s forwards ease;
+}
+
+footer p {
+    margin: 5px 0;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section {
+      margin: 15px;
+      padding: 15px;
+    }
+    input, button {
+      font-size: 14px;
+    }
+  }
